@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 146 | 0 | 0 | — |
+| 147 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -53,6 +53,14 @@
 | `test_subtractor8_zero` | 🟢 PASS |
 
 **24 tests discovered**
+
+## Address Map
+
+| Test | Result |
+|---|---|
+| `test_address_map` | 🟢 PASS |
+
+**1 test discovered**
 
 ## Alu
 

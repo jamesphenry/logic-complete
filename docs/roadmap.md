@@ -29,3 +29,30 @@
                         │
                      Memory
 
+          LOGIC COMPLETE
+                   │
+            ┌──────┴──────┐
+            │             │
+        Hardware      Addressable
+        primitives     devices
+            │             │
+        ROM / RAM      future I/O
+        ALU / regs     disk / NIC
+        mux / bus      timer / GPIO
+        etc.           display / ...
+
+             address
+                │
+                ▼
+        ┌───────────────┐
+        │ ADDRESS SPACE │
+        │     / MAP     │
+        └───────┬───────┘
+                │
+       ┌────────┼────────┐
+       ▼        ▼        ▼
+      ROM      RAM      DEVICE
+                         │
+                    whatever it is
+
+

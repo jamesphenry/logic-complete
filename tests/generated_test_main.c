@@ -28,6 +28,7 @@ void test_subtractor8_borrow(void);
 void test_subtractor8_equal(void);
 void test_subtractor8_simple(void);
 void test_subtractor8_zero(void);
+void test_address_map(void);
 void test_alu_add(void);
 void test_alu_add_carry(void);
 void test_alu_add_no_carry(void);
@@ -187,6 +188,7 @@ int main(void)
     RUN_TEST(test_subtractor8_equal);
     RUN_TEST(test_subtractor8_simple);
     RUN_TEST(test_subtractor8_zero);
+    RUN_TEST(test_address_map);
     RUN_TEST(test_alu_add);
     RUN_TEST(test_alu_add_carry);
     RUN_TEST(test_alu_add_no_carry);
