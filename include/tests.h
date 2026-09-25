@@ -67,4 +67,9 @@ void test_logic_equal_zero_one(void);
 void test_logic_equal_one_zero(void);
 void test_logic_equal_one_one(void);
 
+void test_comparator_equal(void);
+void test_comparator_less(void);
+void test_comparator_greater(void);
+
+
 #endif

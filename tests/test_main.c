@@ -72,5 +72,10 @@ int main(void)
     RUN_TEST(test_logic_equal_zero_one);
     RUN_TEST(test_logic_equal_one_zero);
     RUN_TEST(test_logic_equal_one_one);
+
+    RUN_TEST(test_comparator_equal);
+    RUN_TEST(test_comparator_less);
+    RUN_TEST(test_comparator_greater);
+
     return UNITY_END();
 }
