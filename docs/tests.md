@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 137 | 0 | 0 | — |
+| 140 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -281,4 +281,14 @@
 | `test_shift_right8_carry` | 🟢 PASS |
 
 **4 tests discovered**
+
+## Tset Pc Next
+
+| Test | Result |
+|---|---|
+| `test_pc_next_selects_alternate` | 🟢 PASS |
+| `test_pc_next_selects_increment` | 🟢 PASS |
+| `test_pc_next_wraps_at_255` | 🟢 PASS |
+
+**3 tests discovered**
 

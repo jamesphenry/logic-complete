@@ -137,6 +137,9 @@ void test_shift_left8(void);
 void test_shift_left8_carry(void);
 void test_shift_right8(void);
 void test_shift_right8_carry(void);
+void test_pc_next_selects_alternate(void);
+void test_pc_next_selects_increment(void);
+void test_pc_next_wraps_at_255(void);
 
 void setUp(void)
 {
@@ -287,6 +290,9 @@ int main(void)
     RUN_TEST(test_shift_left8_carry);
     RUN_TEST(test_shift_right8);
     RUN_TEST(test_shift_right8_carry);
+    RUN_TEST(test_pc_next_selects_alternate);
+    RUN_TEST(test_pc_next_selects_increment);
+    RUN_TEST(test_pc_next_wraps_at_255);
 
     return UNITY_END();
 }
