@@ -22,13 +22,6 @@ void test_alu_sub(void)
     TEST_ASSERT_EQUAL_UINT8(2, result.result);
 }
 
-void test_alu_sub_borrow(void)
-{
-    ALU8 result = alu8(3, 5, ALU_SUB);
-
-    TEST_ASSERT_EQUAL_UINT8(0xFE, result.result);
-}
-
 void test_alu_and(void)
 {
     ALU8 result = alu8(0xF0, 0x0F, ALU_AND);
@@ -97,4 +90,52 @@ void test_alu_shr_overflow(void)
     ALU8 result = alu8(0x01, 0x00, ALU_SHR);
 
     TEST_ASSERT_EQUAL_UINT8(0x00, result.result);
+}
+
+void test_alu_zero_flag(void)
+{
+    ALU8 result = alu8(0x01, 0x01, ALU_SUB);
+
+    TEST_ASSERT_EQUAL_UINT8(0x00, result.result);
+    TEST_ASSERT_EQUAL_UINT8(1, result.zero);
+}
+
+void test_alu_nonzero_flag(void)
+{
+    ALU8 result = alu8(0x05, 0x03, ALU_SUB);
+
+    TEST_ASSERT_EQUAL_UINT8(0x02, result.result);
+    TEST_ASSERT_EQUAL_UINT8(0, result.zero);
+}
+
+void test_alu_add_carry(void)
+{
+    ALU8 result = alu8(0xFF, 0x01, ALU_ADD);
+
+    TEST_ASSERT_EQUAL_UINT8(0x00, result.result);
+    TEST_ASSERT_EQUAL_UINT8(1, result.carry);
+}
+
+void test_alu_add_no_carry(void)
+{
+    ALU8 result = alu8(0x05, 0x03, ALU_ADD);
+
+    TEST_ASSERT_EQUAL_UINT8(0x08, result.result);
+    TEST_ASSERT_EQUAL_UINT8(0, result.carry);
+}
+
+void test_alu_sub_borrow(void)
+{
+    ALU8 result = alu8(3, 5, ALU_SUB);
+
+    TEST_ASSERT_EQUAL_UINT8(0xFE, result.result);
+    TEST_ASSERT_EQUAL_UINT8(1, result.borrow);
+}
+
+void test_alu_sub_no_borrow(void)
+{
+    ALU8 result = alu8(5, 3, ALU_SUB);
+
+    TEST_ASSERT_EQUAL_UINT8(0x02, result.result);
+    TEST_ASSERT_EQUAL_UINT8(0, result.borrow);
 }

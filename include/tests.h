@@ -112,4 +112,13 @@ void test_zero_flag8_nonzero(void);
 void test_zero_flag8_high_bit(void);
 void test_zero_flag8_middle_bit(void);
 
+void test_alu_zero_flag(void);
+void test_alu_nonzero_flag(void);
+
+void test_alu_add_carry(void);
+void test_alu_add_no_carry(void);
+
+void test_alu_sub_borrow(void);
+void test_alu_sub_no_borrow(void);
+
 #endif

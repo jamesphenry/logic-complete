@@ -124,5 +124,14 @@ int main(void)
     RUN_TEST(test_zero_flag8_high_bit);
     RUN_TEST(test_zero_flag8_middle_bit);
 
+    RUN_TEST(test_alu_zero_flag);
+    RUN_TEST(test_alu_nonzero_flag);
+
+    RUN_TEST(test_alu_add_carry);
+    RUN_TEST(test_alu_add_no_carry);
+
+    RUN_TEST(test_alu_sub_borrow);
+    RUN_TEST(test_alu_sub_no_borrow);
+
     return UNITY_END();
 }
