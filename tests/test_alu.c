@@ -1,5 +1,6 @@
 #include "unity.h"
 #include "alu.h"
+#include "flags.h"
 
 void test_alu_add(void)
 {
@@ -154,4 +155,27 @@ void test_alu_negative_clear(void)
 
     TEST_ASSERT_EQUAL_UINT8(0x40, result.result);
     TEST_ASSERT_EQUAL_UINT8(0, result.negative);
+}
+
+void test_flags_load(void)
+{
+    Flags flags;
+    ALU8 alu;
+
+    flags_init(&flags);
+
+    alu.result = 0;
+    alu.zero = 1;
+    alu.carry = 1;
+    alu.borrow = 0;
+    alu.negative = 0;
+    alu.overflow = 1;
+
+    flags_load(&flags, &alu);
+
+    TEST_ASSERT_EQUAL_UINT8(1, flags_read_zero(&flags));
+    TEST_ASSERT_EQUAL_UINT8(1, flags_read_carry(&flags));
+    TEST_ASSERT_EQUAL_UINT8(0, flags_read_borrow(&flags));
+    TEST_ASSERT_EQUAL_UINT8(0, flags_read_negative(&flags));
+    TEST_ASSERT_EQUAL_UINT8(1, flags_read_overflow(&flags));
 }

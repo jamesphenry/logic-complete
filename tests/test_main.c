@@ -153,6 +153,9 @@ int main(void)
     RUN_TEST(test_flags_write_borrow);
     RUN_TEST(test_flags_write_negative);
     RUN_TEST(test_flags_write_overflow);
+    RUN_TEST(test_flags_load);
+    RUN_TEST(test_flags_load_from_alu);
+
 
     return UNITY_END();
 }

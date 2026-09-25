@@ -61,3 +61,5 @@ ALU8 alu8(uint8_t a, uint8_t b, uint8_t operation)
         result.zero = zero_flag8(result.result);
         return result;
     }
+
+    

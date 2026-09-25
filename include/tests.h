@@ -145,4 +145,10 @@ void test_flags_write_borrow(void);
 void test_flags_write_negative(void);
 void test_flags_write_overflow(void);
 
+void test_flags_load(void);
+void test_flags_load_from_alu(void);
+
+
+
+
 #endif

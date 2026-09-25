@@ -58,3 +58,13 @@ uint8_t flags_read_overflow(const Flags *flags)
 {
     return flags->overflow;
 }
+
+void flags_load(Flags *flags, const ALU8 *alu)
+{
+    flags_write_zero(flags, alu->zero);
+    flags_write_carry(flags, alu->carry);
+    flags_write_borrow(flags, alu->borrow);
+    flags_write_negative(flags, alu->negative);
+    flags_write_overflow(flags, alu->overflow);
+}
+

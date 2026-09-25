@@ -63,3 +63,17 @@ void test_flags_write_overflow(void)
 
     TEST_ASSERT_EQUAL_UINT8(1, flags_read_overflow(&flags));
 }
+
+void test_flags_load_from_alu(void)
+{
+    Flags flags;
+
+    flags_init(&flags);
+
+    ALU8 alu = alu8(0x7F, 1, ALU_ADD);
+
+    flags_load(&flags, &alu);
+
+    TEST_ASSERT_EQUAL_UINT8(1, flags_read_negative(&flags));
+    TEST_ASSERT_EQUAL_UINT8(1, flags_read_overflow(&flags));
+}

@@ -2,6 +2,7 @@
 #define FLAGS_H
 
 #include <stdint.h>
+#include "alu.h"
 
 typedef struct
 {
@@ -25,5 +26,6 @@ uint8_t flags_read_carry(const Flags *flags);
 uint8_t flags_read_borrow(const Flags *flags);
 uint8_t flags_read_negative(const Flags *flags);
 uint8_t flags_read_overflow(const Flags *flags);
+void flags_load(Flags *flags, const ALU8 *alu);
 
 #endif
