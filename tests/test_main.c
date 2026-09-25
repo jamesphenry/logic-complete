@@ -88,5 +88,7 @@ int main(void)
     RUN_TEST(test_subtractor8_borrow);
     RUN_TEST(test_subtractor8_equal);
 
+    RUN_TEST(test_logic_and8);
+    
     return UNITY_END();
 }

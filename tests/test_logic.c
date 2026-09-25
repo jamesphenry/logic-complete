@@ -110,3 +110,12 @@ void test_logic_not8(void)
     TEST_ASSERT_EQUAL_UINT8(0x55, logic_not8(0xAA));
     TEST_ASSERT_EQUAL_UINT8(0xF0, logic_not8(0x0F));
 }
+
+void test_logic_and8(void)
+{
+    TEST_ASSERT_EQUAL_UINT8(0x00, logic_and8(0x00, 0x00));
+    TEST_ASSERT_EQUAL_UINT8(0x00, logic_and8(0xFF, 0x00));
+    TEST_ASSERT_EQUAL_UINT8(0xFF, logic_and8(0xFF, 0xFF));
+    TEST_ASSERT_EQUAL_UINT8(0x00, logic_and8(0x55, 0xAA));
+    TEST_ASSERT_EQUAL_UINT8(0x50, logic_and8(0xF0, 0x55));
+}

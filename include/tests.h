@@ -81,4 +81,7 @@ void test_subtractor8_simple(void);
 void test_subtractor8_borrow(void);
 void test_subtractor8_equal(void);
 
+void test_logic_and8(void);
+
+
 #endif
