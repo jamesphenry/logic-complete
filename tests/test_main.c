@@ -136,6 +136,13 @@ int main(void)
     RUN_TEST(test_negative_flag8_clear);
     RUN_TEST(test_negative_flag8_set);
     RUN_TEST(test_negative_flag8_max);
+    RUN_TEST(test_alu_negative_set);
+    RUN_TEST(test_alu_negative_clear);
+
+    RUN_TEST(test_overflow_add8_positive);
+    RUN_TEST(test_overflow_add8_negative);
+    RUN_TEST(test_overflow_add8_no_overflow_positive);
+    RUN_TEST(test_overflow_add8_no_overflow_negative);
 
     return UNITY_END();
 }

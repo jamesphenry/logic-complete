@@ -125,5 +125,14 @@ void test_negative_flag8_clear(void);
 void test_negative_flag8_set(void);
 void test_negative_flag8_max(void);
 
+void test_alu_negative_set(void);
+void test_alu_negative_clear(void);
+
+
+void test_overflow_add8_positive(void);
+void test_overflow_add8_negative(void);
+void test_overflow_add8_no_overflow_positive(void);
+void test_overflow_add8_no_overflow_negative(void);
+
 
 #endif

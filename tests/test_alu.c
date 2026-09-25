@@ -139,3 +139,19 @@ void test_alu_sub_no_borrow(void)
     TEST_ASSERT_EQUAL_UINT8(0x02, result.result);
     TEST_ASSERT_EQUAL_UINT8(0, result.borrow);
 }
+
+void test_alu_negative_set(void)
+{
+    ALU8 result = alu8(0x80, 0x00, ALU_OR);
+
+    TEST_ASSERT_EQUAL_UINT8(0x80, result.result);
+    TEST_ASSERT_EQUAL_UINT8(1, result.negative);
+}
+
+void test_alu_negative_clear(void)
+{
+    ALU8 result = alu8(0x40, 0x00, ALU_OR);
+
+    TEST_ASSERT_EQUAL_UINT8(0x40, result.result);
+    TEST_ASSERT_EQUAL_UINT8(0, result.negative);
+}
