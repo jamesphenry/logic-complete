@@ -5,13 +5,13 @@
 <!-- TEST_STATUS_START -->
 | 🧪 Tests | ❌ Failures | ⚪ Ignored | ⚠️ Warnings | 🧠 Memory Errors |
 |---:|---:|---:|---:|---:|
-| **145** | **0** | **0** | **0** | **0** |
+| **146** | **0** | **0** | **0** | **0** |
 <!-- TEST_STATUS_END -->
 
 <!-- MEMORY_STATUS_START -->
 | 📦 Allocs | 🗑️ Frees | 💾 Bytes Allocated | 💧 Leaked Bytes | 🧱 Leaked Blocks |
 |---:|---:|---:|---:|---:|
-| **22** | **22** | **4676** | **0** | **0** |
+| **19** | **19** | **4205** | **0** | **0** |
 <!-- MEMORY_STATUS_END -->
 
 ## About

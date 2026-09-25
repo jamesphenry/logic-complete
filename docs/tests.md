@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 145 | 0 | 0 | — |
+| 150 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -267,14 +267,19 @@
 
 | Test | Result |
 |---|---|
+| `test_register_file_eight_registers` | 🟢 PASS |
 | `test_register_file_init` | 🟢 PASS |
+| `test_register_file_max_registers` | 🟢 PASS |
+| `test_register_file_one_register` | 🟢 PASS |
+| `test_register_file_registers_are_isolated` | 🟢 PASS |
+| `test_register_file_sixteen_registers` | 🟢 PASS |
 | `test_register_file_write_disabled` | 🟢 PASS |
 | `test_register_file_write_register0` | 🟢 PASS |
 | `test_register_file_write_register1` | 🟢 PASS |
 | `test_register_file_write_register2` | 🟢 PASS |
 | `test_register_file_write_register3` | 🟢 PASS |
 
-**6 tests discovered**
+**11 tests discovered**
 
 ## Rom
 
