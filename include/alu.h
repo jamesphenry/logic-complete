@@ -14,6 +14,11 @@
 typedef struct
 {
     uint8_t result;
+
+    uint8_t zero;
+    uint8_t carry;
+    uint8_t negative;
+    uint8_t overflow;
 } ALU8;
 
 ALU8 alu8(uint8_t a, uint8_t b, uint8_t operation);

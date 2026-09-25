@@ -119,5 +119,10 @@ int main(void)
     RUN_TEST(test_alu_shr);
     RUN_TEST(test_alu_shr_overflow);
 
+    RUN_TEST(test_zero_flag8_zero);
+    RUN_TEST(test_zero_flag8_nonzero);
+    RUN_TEST(test_zero_flag8_high_bit);
+    RUN_TEST(test_zero_flag8_middle_bit);
+
     return UNITY_END();
 }

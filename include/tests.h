@@ -107,4 +107,9 @@ void test_alu_shl_overflow(void);
 void test_alu_shr(void);
 void test_alu_shr_overflow(void);
 
+void test_zero_flag8_zero(void);
+void test_zero_flag8_nonzero(void);
+void test_zero_flag8_high_bit(void);
+void test_zero_flag8_middle_bit(void);
+
 #endif
