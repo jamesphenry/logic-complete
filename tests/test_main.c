@@ -156,6 +156,10 @@ int main(void)
     RUN_TEST(test_flags_load);
     RUN_TEST(test_flags_load_from_alu);
 
+    RUN_TEST(test_decoder_00);
+    RUN_TEST(test_decoder_01);
+    RUN_TEST(test_decoder_10);
+    RUN_TEST(test_decoder_11);
 
     return UNITY_END();
 }

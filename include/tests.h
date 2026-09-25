@@ -148,7 +148,10 @@ void test_flags_write_overflow(void);
 void test_flags_load(void);
 void test_flags_load_from_alu(void);
 
-
+void test_decoder_00(void);
+void test_decoder_01(void);
+void test_decoder_10(void);
+void test_decoder_11(void);
 
 
 #endif
