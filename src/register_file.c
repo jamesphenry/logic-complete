@@ -17,32 +17,13 @@ uint8_t register_file_read(
     uint8_t address
 )
 {
-    Decoder2to4 decoder = decoder2to4(
-        get_bit(address, 1),
-        get_bit(address, 0)
-    );
-
-    uint8_t result = register_read(&file->registers[0]);
-
-    result = mux2(
-        result,
+    return mux4(
+        register_read(&file->registers[0]),
         register_read(&file->registers[1]),
-        decoder.output1
-    );
-
-    result = mux2(
-        result,
         register_read(&file->registers[2]),
-        decoder.output2
-    );
-
-    result = mux2(
-        result,
         register_read(&file->registers[3]),
-        decoder.output3
+        address
     );
-
-    return result;
 }
 
 void register_file_write(
