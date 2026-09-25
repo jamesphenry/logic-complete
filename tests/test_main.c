@@ -38,6 +38,15 @@ int main(void)
     RUN_TEST(test_half_adder_one_zero);
     RUN_TEST(test_half_adder_zero_zero);
     
+    RUN_TEST(test_full_adder_zero_zero_zero);
+    RUN_TEST(test_full_adder_zero_zero_one);
+    RUN_TEST(test_full_adder_zero_one_zero);
+    RUN_TEST(test_full_adder_zero_one_one);
+    RUN_TEST(test_full_adder_one_zero_zero);
+    RUN_TEST(test_full_adder_one_zero_one);
+    RUN_TEST(test_full_adder_one_one_zero);
+    RUN_TEST(test_full_adder_one_one_one);
+
 
     return UNITY_END();
 }

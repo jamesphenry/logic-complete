@@ -30,4 +30,14 @@ void test_half_adder_zero_one(void);
 void test_half_adder_one_zero(void);
 void test_half_adder_one_one(void);
 
+void test_full_adder_zero_zero_zero(void);
+void test_full_adder_zero_zero_one(void);
+void test_full_adder_zero_one_zero(void);
+void test_full_adder_zero_one_one(void);
+void test_full_adder_one_zero_zero(void);
+void test_full_adder_one_zero_one(void);
+void test_full_adder_one_one_zero(void);
+void test_full_adder_one_one_one(void);
+
+
 #endif
