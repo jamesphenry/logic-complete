@@ -82,12 +82,16 @@ void test_subtractor8_borrow(void);
 void test_subtractor8_equal(void);
 
 void test_logic_and8(void);
-
 void test_logic_or8(void);
-
 void test_logic_xor8(void);
-
 void test_logic_nand8(void);
 
+void test_shift_left8(void);
+void test_shift_left8_carry(void);
+void test_shift_right8(void);
+void test_shift_right8_carry(void);
 
+void test_alu_add(void);
+void test_alu_add_overflow(void);
+void test_alu_sub_borrow(void);
 #endif

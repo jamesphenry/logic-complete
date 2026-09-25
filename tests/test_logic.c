@@ -1,5 +1,6 @@
 #include "unity.h"
 #include "logic.h"
+#include "shifter.h"
 
 void test_logic_not_zero(void)
 {

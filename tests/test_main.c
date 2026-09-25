@@ -89,11 +89,18 @@ int main(void)
     RUN_TEST(test_subtractor8_equal);
 
     RUN_TEST(test_logic_and8);
-
     RUN_TEST(test_logic_or8);
-
     RUN_TEST(test_logic_xor8);
     RUN_TEST(test_logic_nand8);
+
+    RUN_TEST(test_shift_left8);
+    RUN_TEST(test_shift_left8_carry);
+    RUN_TEST(test_shift_right8);
+    RUN_TEST(test_shift_right8_carry);
+
+    RUN_TEST(test_alu_add);
+    RUN_TEST(test_alu_add_overflow);
+    RUN_TEST(test_alu_sub_borrow);
     
     return UNITY_END();
 }
