@@ -50,5 +50,21 @@ void test_adder8_example_addition(void);
 void test_adder8_with_carry_in(void);
 void test_adder8_carry_in_and_carry_out(void);
 
+void test_get_bit_zero(void);
+void test_get_bit_one(void);
+void test_get_bit_from_middle(void);
+void test_get_bit_from_high_bit(void);
+void test_get_bit_clear_bit(void);
+
+void test_set_bit_sets_clear_bit(void);
+void test_set_bit_sets_high_bit(void);
+void test_set_bit_clears_set_bit(void);
+void test_set_bit_does_not_change_other_bits(void);
+void test_set_bit_can_clear_one_bit_without_affecting_others(void);
+
+void test_logic_equal_zero_zero(void);
+void test_logic_equal_zero_one(void);
+void test_logic_equal_one_zero(void);
+void test_logic_equal_one_one(void);
 
 #endif

@@ -65,3 +65,23 @@ void test_logic_nor(void)
     TEST_ASSERT_EQUAL_UINT8(0, logic_nor(1, 0));
     TEST_ASSERT_EQUAL_UINT8(0, logic_nor(1, 1));
 }
+
+void test_logic_equal_zero_zero(void)
+{
+    TEST_ASSERT_EQUAL_UINT8(1, logic_equal(0, 0));
+}
+
+void test_logic_equal_zero_one(void)
+{
+    TEST_ASSERT_EQUAL_UINT8(0, logic_equal(0, 1));
+}
+
+void test_logic_equal_one_zero(void)
+{
+    TEST_ASSERT_EQUAL_UINT8(0, logic_equal(1, 0));
+}
+
+void test_logic_equal_one_one(void)
+{
+    TEST_ASSERT_EQUAL_UINT8(1, logic_equal(1, 1));
+}

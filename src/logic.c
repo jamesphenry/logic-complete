@@ -34,3 +34,8 @@ uint8_t logic_nor(uint8_t a, uint8_t b)
 {
     return logic_not(logic_or(a, b));
 }
+
+uint8_t logic_equal(uint8_t a, uint8_t b)
+{
+    return logic_not(logic_xor(a, b));
+}
