@@ -1,0 +1,35 @@
+#!/bin/sh
+
+echo "Running PineArch-C tests..."
+
+TEST_OUTPUT=$(make test 2>&1)
+TEST_STATUS=$?
+
+printf '%s\n' "$TEST_OUTPUT"
+
+if [ $TEST_STATUS -ne 0 ]; then
+    echo
+    echo "❌ Tests failed. Commit aborted."
+    exit 1
+fi
+
+echo
+echo "Updating README test status..."
+
+TEST_COUNT=$(printf '%s\n' "$TEST_OUTPUT" |
+    grep -o '[0-9][0-9]* Tests' |
+    tail -1 |
+    grep -o '[0-9][0-9]*')
+
+if [ -z "$TEST_COUNT" ]; then
+    echo "❌ Could not determine test count."
+    exit 1
+fi
+
+python3 scripts/update_readme.py "$TEST_COUNT"
+
+git add README.md
+
+echo "✅ $TEST_COUNT tests passing."
+echo "README updated."
+
