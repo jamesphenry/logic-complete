@@ -121,4 +121,9 @@ void test_alu_add_no_carry(void);
 void test_alu_sub_borrow(void);
 void test_alu_sub_no_borrow(void);
 
+void test_negative_flag8_clear(void);
+void test_negative_flag8_set(void);
+void test_negative_flag8_max(void);
+
+
 #endif

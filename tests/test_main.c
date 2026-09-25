@@ -133,5 +133,9 @@ int main(void)
     RUN_TEST(test_alu_sub_borrow);
     RUN_TEST(test_alu_sub_no_borrow);
 
+    RUN_TEST(test_negative_flag8_clear);
+    RUN_TEST(test_negative_flag8_set);
+    RUN_TEST(test_negative_flag8_max);
+
     return UNITY_END();
 }
