@@ -37,3 +37,48 @@ void test_mux_inputs_are_independent(void)
     TEST_ASSERT_EQUAL_UINT8(0x55, mux2(0x55, 0xAA, 0));
     TEST_ASSERT_EQUAL_UINT8(0xAA, mux2(0x55, 0xAA, 1));
 }
+
+void test_mux16(void)
+{
+    uint8_t inputs[16];
+
+    for (uint8_t i = 0; i < 16; i++)
+    {
+        inputs[i] = i;
+    }
+
+    for (uint8_t select = 0; select < 16; select++)
+    {
+        TEST_ASSERT_EQUAL_UINT8(
+            select,
+            mux16(inputs, select));
+    }
+}
+
+void test_mux4_select_a(void)
+{
+    uint8_t result = mux4(10, 20, 30, 40, 0);
+
+    TEST_ASSERT_EQUAL_UINT8(10, result);
+}
+
+void test_mux4_select_b(void)
+{
+    uint8_t result = mux4(10, 20, 30, 40, 1);
+
+    TEST_ASSERT_EQUAL_UINT8(20, result);
+}
+
+void test_mux4_select_c(void)
+{
+    uint8_t result = mux4(10, 20, 30, 40, 2);
+
+    TEST_ASSERT_EQUAL_UINT8(30, result);
+}
+
+void test_mux4_select_d(void)
+{
+    uint8_t result = mux4(10, 20, 30, 40, 3);
+
+    TEST_ASSERT_EQUAL_UINT8(40, result);
+}

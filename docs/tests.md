@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 143 | 0 | 0 | — |
+| 145 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -134,12 +134,13 @@
 
 | Test | Result |
 |---|---|
+| `test_decoder4to16` | 🟢 PASS |
 | `test_decoder_00` | 🟢 PASS |
 | `test_decoder_01` | 🟢 PASS |
 | `test_decoder_10` | 🟢 PASS |
 | `test_decoder_11` | 🟢 PASS |
 
-**4 tests discovered**
+**5 tests discovered**
 
 ## Flags
 
@@ -205,24 +206,18 @@
 
 | Test | Result |
 |---|---|
+| `test_mux16` | 🟢 PASS |
+| `test_mux4_select_a` | 🟢 PASS |
+| `test_mux4_select_b` | 🟢 PASS |
+| `test_mux4_select_c` | 🟢 PASS |
+| `test_mux4_select_d` | 🟢 PASS |
 | `test_mux_can_select_maximum_value` | 🟢 PASS |
 | `test_mux_can_select_zero` | 🟢 PASS |
 | `test_mux_inputs_are_independent` | 🟢 PASS |
 | `test_mux_selects_a_when_select_is_zero` | 🟢 PASS |
 | `test_mux_selects_b_when_select_is_one` | 🟢 PASS |
 
-**5 tests discovered**
-
-## Mux4
-
-| Test | Result |
-|---|---|
-| `test_mux4_select_a` | 🟢 PASS |
-| `test_mux4_select_b` | 🟢 PASS |
-| `test_mux4_select_c` | 🟢 PASS |
-| `test_mux4_select_d` | 🟢 PASS |
-
-**4 tests discovered**
+**10 tests discovered**
 
 ## Negative
 
