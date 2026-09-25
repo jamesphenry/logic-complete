@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 126 | 0 | 0 | — |
+| 129 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -204,6 +204,16 @@
 | `test_overflow_add8_positive` | 🟢 PASS |
 
 **5 tests discovered**
+
+## Ram
+
+| Test | Result |
+|---|---|
+| `test_ram_destroy` | 🟢 PASS |
+| `test_ram_init` | 🟢 PASS |
+| `test_ram_write` | 🟢 PASS |
+
+**3 tests discovered**
 
 ## Register
 
