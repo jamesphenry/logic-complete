@@ -102,3 +102,37 @@ void test_cpu_fetches_sequential_instructions(void)
 
     cpu_destroy(&cpu);
 }
+
+void test_cpu_alu_register_wiring(void)
+{
+    CPU cpu;
+    
+    uint8_t program[] = {0};
+
+    cpu_init(&cpu, program, 1, 0);
+
+    register_file_write(
+        &cpu.registers,
+        0,
+        10,
+        1
+    );
+
+    register_file_write(
+        &cpu.registers,
+        1,
+        20,
+        1
+    );
+
+    cpu.alu_operation = ALU_ADD;
+    cpu.alu_result_enable = 1;
+    cpu_step(&cpu);
+
+    TEST_ASSERT_EQUAL_UINT8(
+        30,
+        register_file_read(&cpu.registers, 2)
+    );
+
+    cpu_destroy(&cpu);
+}

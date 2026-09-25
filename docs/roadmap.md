@@ -11,3 +11,21 @@
               │                     │
               ▼                     ▼
         "How does it work?"    "How should it be modeled?"
+
+
+                    Logic Complete
+                         │
+             ┌───────────┴───────────┐
+             │                       │
+          Core 0                  Core 1
+             │                       │
+        ┌────┴────┐             ┌────┴────┐
+        │         │             │         │
+      Registers  ALU         Registers  ALU
+        │         │             │         │
+        └────┬────┘             └────┬────┘
+             │                       │
+             └──────────┬────────────┘
+                        │
+                     Memory
+

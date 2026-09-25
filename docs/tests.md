@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 140 | 0 | 0 | — |
+| 146 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -79,9 +79,10 @@
 | `test_alu_xor` | 🟢 PASS |
 | `test_alu_xor_partial` | 🟢 PASS |
 | `test_alu_zero_flag` | 🟢 PASS |
+| `test_cpu_alu_result_enable` | 🟢 PASS |
 | `test_flags_load` | 🟢 PASS |
 
-**22 tests discovered**
+**23 tests discovered**
 
 ## Bits
 
@@ -100,6 +101,17 @@
 
 **10 tests discovered**
 
+## Bus
+
+| Test | Result |
+|---|---|
+| `test_bus_selects_source0` | 🟢 PASS |
+| `test_bus_selects_source1` | 🟢 PASS |
+| `test_bus_selects_source2` | 🟢 PASS |
+| `test_bus_selects_source3` | 🟢 PASS |
+
+**4 tests discovered**
+
 ## Comparator
 
 | Test | Result |
@@ -114,11 +126,12 @@
 
 | Test | Result |
 |---|---|
+| `test_cpu_alu_register_wiring` | 🟢 PASS |
 | `test_cpu_fetches_instruction` | 🟢 PASS |
 | `test_cpu_fetches_sequential_instructions` | 🟢 PASS |
 | `test_cpu_increments_program_counter` | 🟢 PASS |
 
-**3 tests discovered**
+**4 tests discovered**
 
 ## Decoder
 
