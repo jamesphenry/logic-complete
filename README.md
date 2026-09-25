@@ -8,7 +8,7 @@
 
 ## About
 
-PineArch-C is an experimental CPU simulator being built from the ground up in C.
+Logic Complete is an experimental CPU simulator being built from the ground up in C.
 
 The goal isn't simply to emulate a CPU. The project intentionally models the hardware as a collection of increasingly complex components, with each layer built from and tested against the layers beneath it.
 
