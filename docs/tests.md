@@ -155,6 +155,16 @@
 
 **7 tests discovered**
 
+## Increment Mux
+
+| Test | Result |
+|---|---|
+| `test_increment_mux_selects_alternate` | 🟢 PASS |
+| `test_increment_mux_wraps_at_255` | 🟢 PASS |
+| `test_pc_increment_mux_selects_increment` | 🟢 PASS |
+
+**3 tests discovered**
+
 ## Logic
 
 | Test | Result |
@@ -235,16 +245,6 @@
 | `test_overflow_add8_positive` | 🟢 PASS |
 
 **5 tests discovered**
-
-## Pc Next
-
-| Test | Result |
-|---|---|
-| `test_pc_next_selects_alternate` | 🟢 PASS |
-| `test_pc_next_selects_increment` | 🟢 PASS |
-| `test_pc_next_wraps_at_255` | 🟢 PASS |
-
-**3 tests discovered**
 
 ## Ram
 

@@ -1,9 +1,9 @@
-#include "pc_next.h"
+#include "increment_mux.h"
 
 #include "adder.h"
 #include "mux.h"
 
-uint8_t pc_next(
+uint8_t increment_mux(
     uint8_t current,
     uint8_t alternate,
     uint8_t select

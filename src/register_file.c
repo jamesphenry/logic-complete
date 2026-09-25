@@ -1,15 +1,32 @@
+#include <stdlib.h>
+#include <stddef.h>
 #include "register_file.h"
 #include "decoder.h"
 #include "mux.h"
 #include "bits.h"
 #include "logic.h"
 
-void register_file_init(RegisterFile *file)
+int register_file_init(RegisterFile *file, size_t count)
 {
-    for (uint8_t i = 0; i < REGISTER_FILE_COUNT; i++)
+    if (count > REGISTER_FILE_MAX)
+    {
+        return REGISTER_FILE_MAX_EXCEEDED;
+    }
+
+    file->registers = malloc(count * sizeof(Register));
+    if (file->registers == NULL)
+    {
+        return REGISTER_FILE_ALLOCATION_FAILED;
+    }
+
+    file->count = count;
+
+    for (size_t i = 0; i < count; i++)
     {
         register_init(&file->registers[i]);
     }
+
+    return REGISTER_INIT_SUCCESS;
 }
 
 uint8_t register_file_read(
@@ -61,4 +78,11 @@ void register_file_write(
             register_write(&file->registers[3], value, write3);
         }
     }
+}
+
+void register_file_destroy(RegisterFile *file)
+{
+    free(file->registers);
+    file->registers = NULL;
+    file->count = 0;
 }
