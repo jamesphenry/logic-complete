@@ -1,7 +1,6 @@
 #include "unity.h"
 #include "alu.h"
 #include "flags.h"
-#include "cpu.h"
 
 void test_alu_add(void)
 {

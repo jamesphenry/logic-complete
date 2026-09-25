@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 146 | 0 | 0 | — |
+| 143 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -79,10 +79,9 @@
 | `test_alu_xor` | 🟢 PASS |
 | `test_alu_xor_partial` | 🟢 PASS |
 | `test_alu_zero_flag` | 🟢 PASS |
-| `test_cpu_alu_result_enable` | 🟢 PASS |
 | `test_flags_load` | 🟢 PASS |
 
-**23 tests discovered**
+**22 tests discovered**
 
 ## Bits
 
@@ -109,8 +108,9 @@
 | `test_bus_selects_source1` | 🟢 PASS |
 | `test_bus_selects_source2` | 🟢 PASS |
 | `test_bus_selects_source3` | 🟢 PASS |
+| `test_bus_to_alu_to_bus` | 🟢 PASS |
 
-**4 tests discovered**
+**5 tests discovered**
 
 ## Comparator
 
@@ -122,16 +122,13 @@
 
 **3 tests discovered**
 
-## Cpu
+## Datapath
 
 | Test | Result |
 |---|---|
-| `test_cpu_alu_register_wiring` | 🟢 PASS |
-| `test_cpu_fetches_instruction` | 🟢 PASS |
-| `test_cpu_fetches_sequential_instructions` | 🟢 PASS |
-| `test_cpu_increments_program_counter` | 🟢 PASS |
+| `test_register_to_bus_to_register` | 🟢 PASS |
 
-**4 tests discovered**
+**1 test discovered**
 
 ## Decoder
 
@@ -239,6 +236,16 @@
 
 **5 tests discovered**
 
+## Pc Next
+
+| Test | Result |
+|---|---|
+| `test_pc_next_selects_alternate` | 🟢 PASS |
+| `test_pc_next_selects_increment` | 🟢 PASS |
+| `test_pc_next_wraps_at_255` | 🟢 PASS |
+
+**3 tests discovered**
+
 ## Ram
 
 | Test | Result |
@@ -294,14 +301,4 @@
 | `test_shift_right8_carry` | 🟢 PASS |
 
 **4 tests discovered**
-
-## Tset Pc Next
-
-| Test | Result |
-|---|---|
-| `test_pc_next_selects_alternate` | 🟢 PASS |
-| `test_pc_next_selects_increment` | 🟢 PASS |
-| `test_pc_next_wraps_at_255` | 🟢 PASS |
-
-**3 tests discovered**
 

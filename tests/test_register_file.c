@@ -62,3 +62,4 @@ void test_register_file_write_disabled(void)
 
     TEST_ASSERT_EQUAL_UINT8(0, register_file_read(&file, 2));
 }
+

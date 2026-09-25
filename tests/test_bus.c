@@ -1,5 +1,5 @@
 #include "unity.h"
-
+#include "alu.h"
 #include "bus.h"
 
 void test_bus_selects_source0(void)
@@ -52,4 +52,31 @@ void test_bus_selects_source3(void)
     );
 
     TEST_ASSERT_EQUAL_UINT8(40, result);
+}
+
+void test_bus_to_alu_to_bus(void)
+{
+    uint8_t bus_input = bus_select(
+        10,
+        20,
+        0,
+        0,
+        1
+    );
+
+    ALU8 alu = alu8(
+        5,
+        bus_input,
+        ALU_ADD
+    );
+
+    uint8_t bus_output = bus_select(
+        0,
+        alu.result,
+        0,
+        0,
+        1
+    );
+
+    TEST_ASSERT_EQUAL_UINT8(25, bus_output);
 }

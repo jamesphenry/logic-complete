@@ -49,7 +49,6 @@ void test_alu_sub_no_borrow(void);
 void test_alu_xor(void);
 void test_alu_xor_partial(void);
 void test_alu_zero_flag(void);
-void test_cpu_alu_result_enable(void);
 void test_flags_load(void);
 void test_get_bit_clear_bit(void);
 void test_get_bit_from_high_bit(void);
@@ -65,13 +64,11 @@ void test_bus_selects_source0(void);
 void test_bus_selects_source1(void);
 void test_bus_selects_source2(void);
 void test_bus_selects_source3(void);
+void test_bus_to_alu_to_bus(void);
 void test_comparator_equal(void);
 void test_comparator_greater(void);
 void test_comparator_less(void);
-void test_cpu_alu_register_wiring(void);
-void test_cpu_fetches_instruction(void);
-void test_cpu_fetches_sequential_instructions(void);
-void test_cpu_increments_program_counter(void);
+void test_register_to_bus_to_register(void);
 void test_decoder_00(void);
 void test_decoder_01(void);
 void test_decoder_10(void);
@@ -122,6 +119,9 @@ void test_overflow_add8_negative(void);
 void test_overflow_add8_no_overflow_negative(void);
 void test_overflow_add8_no_overflow_positive(void);
 void test_overflow_add8_positive(void);
+void test_pc_next_selects_alternate(void);
+void test_pc_next_selects_increment(void);
+void test_pc_next_wraps_at_255(void);
 void test_ram_destroy(void);
 void test_ram_init(void);
 void test_ram_write(void);
@@ -143,9 +143,6 @@ void test_shift_left8(void);
 void test_shift_left8_carry(void);
 void test_shift_right8(void);
 void test_shift_right8_carry(void);
-void test_pc_next_selects_alternate(void);
-void test_pc_next_selects_increment(void);
-void test_pc_next_wraps_at_255(void);
 
 void setUp(void)
 {
@@ -208,7 +205,6 @@ int main(void)
     RUN_TEST(test_alu_xor);
     RUN_TEST(test_alu_xor_partial);
     RUN_TEST(test_alu_zero_flag);
-    RUN_TEST(test_cpu_alu_result_enable);
     RUN_TEST(test_flags_load);
     RUN_TEST(test_get_bit_clear_bit);
     RUN_TEST(test_get_bit_from_high_bit);
@@ -224,13 +220,11 @@ int main(void)
     RUN_TEST(test_bus_selects_source1);
     RUN_TEST(test_bus_selects_source2);
     RUN_TEST(test_bus_selects_source3);
+    RUN_TEST(test_bus_to_alu_to_bus);
     RUN_TEST(test_comparator_equal);
     RUN_TEST(test_comparator_greater);
     RUN_TEST(test_comparator_less);
-    RUN_TEST(test_cpu_alu_register_wiring);
-    RUN_TEST(test_cpu_fetches_instruction);
-    RUN_TEST(test_cpu_fetches_sequential_instructions);
-    RUN_TEST(test_cpu_increments_program_counter);
+    RUN_TEST(test_register_to_bus_to_register);
     RUN_TEST(test_decoder_00);
     RUN_TEST(test_decoder_01);
     RUN_TEST(test_decoder_10);
@@ -281,6 +275,9 @@ int main(void)
     RUN_TEST(test_overflow_add8_no_overflow_negative);
     RUN_TEST(test_overflow_add8_no_overflow_positive);
     RUN_TEST(test_overflow_add8_positive);
+    RUN_TEST(test_pc_next_selects_alternate);
+    RUN_TEST(test_pc_next_selects_increment);
+    RUN_TEST(test_pc_next_wraps_at_255);
     RUN_TEST(test_ram_destroy);
     RUN_TEST(test_ram_init);
     RUN_TEST(test_ram_write);
@@ -302,9 +299,6 @@ int main(void)
     RUN_TEST(test_shift_left8_carry);
     RUN_TEST(test_shift_right8);
     RUN_TEST(test_shift_right8_carry);
-    RUN_TEST(test_pc_next_selects_alternate);
-    RUN_TEST(test_pc_next_selects_increment);
-    RUN_TEST(test_pc_next_wraps_at_255);
 
     return UNITY_END();
 }
