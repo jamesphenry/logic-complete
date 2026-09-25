@@ -22,7 +22,6 @@ typedef struct
     Register instruction;
 
     uint8_t alu_operation;
-    uint8_t alu_result_enable;
 } CPU;
 
 void cpu_init(
