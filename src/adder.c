@@ -31,6 +31,8 @@ Adder8 adder8(uint8_t a, uint8_t b, uint8_t carry_in)
     Adder8 result;
     uint8_t carry = carry_in;
 
+    result.sum = 0;
+
     for (uint8_t bit = 0; bit < 8; bit++)
     {
         uint8_t a_bit = (a >> bit) & 1;
