@@ -3,10 +3,16 @@
 > A small CPU simulator written in C11, built from the bottom up as a hardware-design and C-learning project.
 
 <!-- TEST_STATUS_START -->
-| 🧪 Tests | ❌ Failures | ⚪ Ignored | ⚠️ Warnings |
-|---:|---:|---:|---:|
-| **126** | **0** | **0** | **0** |
+| 🧪 Tests | ❌ Failures | ⚪ Ignored | ⚠️ Warnings | 🧠 Memory Errors |
+|---:|---:|---:|---:|---:|
+| **126** | **0** | **0** | **0** | **0** |
 <!-- TEST_STATUS_END -->
+
+<!-- MEMORY_STATUS_START -->
+| 📦 Allocs | 🗑️ Frees | 💾 Bytes Allocated | 💧 Leaked Bytes | 🧱 Leaked Blocks |
+|---:|---:|---:|---:|---:|
+| **4** | **4** | **4108** | **0** | **0** |
+<!-- MEMORY_STATUS_END -->
 
 ## About
 

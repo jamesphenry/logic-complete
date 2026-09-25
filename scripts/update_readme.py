@@ -28,6 +28,12 @@ def main():
         "failures",
         "ignored",
         "warnings",
+        "memory_errors",
+        "allocs",
+        "frees",
+        "bytes_allocated",
+        "leaked_bytes",
+        "leaked_blocks",
     ]
 
     for key in required:
@@ -40,32 +46,66 @@ def main():
     ignored = status["ignored"]
     warnings = status["warnings"]
 
+    memory_errors = status["memory_errors"]
+    allocs = status["allocs"]
+    frees = status["frees"]
+    bytes_allocated = status["bytes_allocated"]
+    leaked_bytes = status["leaked_bytes"]
+    leaked_blocks = status["leaked_blocks"]
+
     readme = README_FILE.read_text()
 
-    replacement = (
+    test_replacement = (
         "<!-- TEST_STATUS_START -->\n"
-        "| 🧪 Tests | ❌ Failures | ⚪ Ignored | ⚠️ Warnings |\n"
-        "|---:|---:|---:|---:|\n"
-        f"| **{tests}** | **{failures}** | "
-        f"**{ignored}** | **{warnings}** |\n"
+        "| 🧪 Tests | ❌ Failures | ⚪ Ignored | ⚠️ Warnings | 🧠 Memory Errors |\n"
+        "|---:|---:|---:|---:|---:|\n"
+        f"| **{tests}** | **{failures}** | **{ignored}** | "
+        f"**{warnings}** | **{memory_errors}** |\n"
         "<!-- TEST_STATUS_END -->"
     )
 
-    pattern = (
+    test_pattern = (
         r"<!-- TEST_STATUS_START -->"
         r".*?"
         r"<!-- TEST_STATUS_END -->"
     )
 
-    readme, count = re.subn(
-        pattern,
-        replacement,
+    readme, test_count = re.subn(
+        test_pattern,
+        test_replacement,
         readme,
         flags=re.DOTALL
     )
 
-    if count != 1:
+    if test_count != 1:
         print("❌ Could not find README test status markers.")
+        sys.exit(1)
+
+    memory_replacement = (
+        "<!-- MEMORY_STATUS_START -->\n"
+        "| 📦 Allocs | 🗑️ Frees | 💾 Bytes Allocated | "
+        "💧 Leaked Bytes | 🧱 Leaked Blocks |\n"
+        "|---:|---:|---:|---:|---:|\n"
+        f"| **{allocs}** | **{frees}** | **{bytes_allocated}** | "
+        f"**{leaked_bytes}** | **{leaked_blocks}** |\n"
+        "<!-- MEMORY_STATUS_END -->"
+    )
+
+    memory_pattern = (
+        r"<!-- MEMORY_STATUS_START -->"
+        r".*?"
+        r"<!-- MEMORY_STATUS_END -->"
+    )
+
+    readme, memory_count = re.subn(
+        memory_pattern,
+        memory_replacement,
+        readme,
+        flags=re.DOTALL
+    )
+
+    if memory_count != 1:
+        print("❌ Could not find README memory status markers.")
         sys.exit(1)
 
     README_FILE.write_text(readme)
@@ -75,7 +115,9 @@ def main():
         f"{tests} tests, "
         f"{failures} failures, "
         f"{ignored} ignored, "
-        f"{warnings} warnings."
+        f"{warnings} warnings, "
+        f"{memory_errors} memory errors, "
+        f"{leaked_bytes} leaked bytes."
     )
 
 

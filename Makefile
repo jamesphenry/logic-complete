@@ -138,7 +138,16 @@ test: $(TEST_TARGET)
 		$(TEST_STATUS) \
 		$(COMPILER_OUTPUT) \
 		$(VALGRIND_OUTPUT)
+	@python3 scripts/generate_test_status.py \
+		$(BUILD_DIR)/test_output \
+		$(TEST_STATUS) \
+		$(COMPILER_OUTPUT) \
+		$(VALGRIND_OUTPUT)
 
+	@echo
+	@echo "Updating README..."
+	@python3 scripts/update_readme.py
+	
 # ------------------------------------------------------------
 # Run main simulator
 # ------------------------------------------------------------
