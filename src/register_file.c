@@ -33,12 +33,21 @@ uint8_t register_file_read(
     const RegisterFile *file,
     uint8_t address)
 {
-    return mux4(
-        register_read(&file->registers[0]),
-        register_read(&file->registers[1]),
-        register_read(&file->registers[2]),
-        register_read(&file->registers[3]),
-        address);
+    uint8_t values[REGISTER_FILE_MAX];
+
+    for (size_t i = 0; i < REGISTER_FILE_MAX; i++)
+    {
+        if (i < file->count)
+        {
+            values[i] = register_read(&file->registers[i]);
+        }
+        else
+        {
+            values[i] = 0;
+        }
+    }
+
+    return mux16(values, address);
 }
 
 void register_file_write(
@@ -47,36 +56,22 @@ void register_file_write(
     uint8_t value,
     uint8_t enable)
 {
-    if (enable)
+    Decoder4to16 decoder = decoder4to16(
+        get_bit(address, 3),
+        get_bit(address, 2),
+        get_bit(address, 1),
+        get_bit(address, 0));
+
+    for (size_t i = 0; i < file->count; i++)
     {
-        Decoder2to4 decoder = decoder2to4(
-            get_bit(address, 1),
-            get_bit(address, 0));
+        uint8_t write_enable = logic_and(
+            decoder.output[i],
+            enable);
 
-        uint8_t write0 = logic_and(decoder.output0, enable);
-        uint8_t write1 = logic_and(decoder.output1, enable);
-        uint8_t write2 = logic_and(decoder.output2, enable);
-        uint8_t write3 = logic_and(decoder.output3, enable);
-
-        if (write0)
-        {
-            register_write(&file->registers[0], value, write0);
-        }
-
-        if (write1)
-        {
-            register_write(&file->registers[1], value, write1);
-        }
-
-        if (write2)
-        {
-            register_write(&file->registers[2], value, write2);
-        }
-
-        if (write3)
-        {
-            register_write(&file->registers[3], value, write3);
-        }
+        register_write(
+            &file->registers[i],
+            value,
+            write_enable);
     }
 }
 
