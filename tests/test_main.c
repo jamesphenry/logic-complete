@@ -47,6 +47,14 @@ int main(void)
     RUN_TEST(test_full_adder_one_one_zero);
     RUN_TEST(test_full_adder_one_one_one);
 
+    RUN_TEST(test_adder8_zero);
+    RUN_TEST(test_adder8_simple_addition);
+    RUN_TEST(test_adder8_carry_across_nibble);
+    RUN_TEST(test_adder8_carry_out);
+    RUN_TEST(test_adder8_pattern_addition);
+    RUN_TEST(test_adder8_example_addition);
+    RUN_TEST(test_adder8_with_carry_in);
+    RUN_TEST(test_adder8_carry_in_and_carry_out);
 
     return UNITY_END();
 }

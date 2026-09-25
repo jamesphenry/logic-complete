@@ -25,3 +25,28 @@ FullAdder full_adder(uint8_t a, uint8_t b, uint8_t carry_in)
 
     return result;
 }
+
+Adder8 adder8(uint8_t a, uint8_t b, uint8_t carry_in)
+{
+    Adder8 result;
+    uint8_t carry = carry_in;
+
+    for (uint8_t bit = 0; bit < 8; bit++)
+    {
+        uint8_t a_bit = (a >> bit) & 1;
+        uint8_t b_bit = (b >> bit) & 1;
+
+        FullAdder current = full_adder(a_bit, b_bit, carry);
+
+        if (current.sum == 1)
+        {
+            result.sum |= (uint8_t)(1 << bit);
+        }
+
+        carry = current.carry;
+    }
+
+    result.carry = carry;
+
+    return result;
+}

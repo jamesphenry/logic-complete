@@ -39,5 +39,16 @@ void test_full_adder_one_zero_one(void);
 void test_full_adder_one_one_zero(void);
 void test_full_adder_one_one_one(void);
 
+/* 8-bit Adder tests */
+
+void test_adder8_zero(void);
+void test_adder8_simple_addition(void);
+void test_adder8_carry_across_nibble(void);
+void test_adder8_carry_out(void);
+void test_adder8_pattern_addition(void);
+void test_adder8_example_addition(void);
+void test_adder8_with_carry_in(void);
+void test_adder8_carry_in_and_carry_out(void);
+
 
 #endif
