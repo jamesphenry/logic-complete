@@ -85,3 +85,28 @@ void test_logic_equal_one_one(void)
 {
     TEST_ASSERT_EQUAL_UINT8(1, logic_equal(1, 1));
 }
+
+void test_logic_greater(void)
+{
+    TEST_ASSERT_EQUAL_UINT8(0, logic_greater(0, 0));
+    TEST_ASSERT_EQUAL_UINT8(0, logic_greater(0, 1));
+    TEST_ASSERT_EQUAL_UINT8(1, logic_greater(1, 0));
+    TEST_ASSERT_EQUAL_UINT8(0, logic_greater(1, 1));
+}
+
+void test_logic_less(void)
+{
+    TEST_ASSERT_EQUAL_UINT8(0, logic_less(0, 0));
+    TEST_ASSERT_EQUAL_UINT8(1, logic_less(0, 1));
+    TEST_ASSERT_EQUAL_UINT8(0, logic_less(1, 0));
+    TEST_ASSERT_EQUAL_UINT8(0, logic_less(1, 1));
+}
+
+void test_logic_not8(void)
+{
+    TEST_ASSERT_EQUAL_UINT8(0xFF, logic_not8(0x00));
+    TEST_ASSERT_EQUAL_UINT8(0x00, logic_not8(0xFF));
+    TEST_ASSERT_EQUAL_UINT8(0xAA, logic_not8(0x55));
+    TEST_ASSERT_EQUAL_UINT8(0x55, logic_not8(0xAA));
+    TEST_ASSERT_EQUAL_UINT8(0xF0, logic_not8(0x0F));
+}

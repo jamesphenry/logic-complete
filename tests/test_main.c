@@ -77,5 +77,16 @@ int main(void)
     RUN_TEST(test_comparator_less);
     RUN_TEST(test_comparator_greater);
 
+    RUN_TEST(test_logic_greater);
+
+    RUN_TEST(test_logic_less);
+
+    RUN_TEST(test_logic_not8);
+
+    RUN_TEST(test_subtractor8_zero);
+    RUN_TEST(test_subtractor8_simple);
+    RUN_TEST(test_subtractor8_borrow);
+    RUN_TEST(test_subtractor8_equal);
+
     return UNITY_END();
 }

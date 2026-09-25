@@ -10,5 +10,8 @@ uint8_t logic_xor(uint8_t a, uint8_t b);
 uint8_t logic_nand(uint8_t a, uint8_t b);
 uint8_t logic_nor(uint8_t a, uint8_t b);
 uint8_t logic_equal(uint8_t a, uint8_t b);
+uint8_t logic_greater(uint8_t a, uint8_t b);
+uint8_t logic_less(uint8_t a, uint8_t b);
+uint8_t logic_not8(uint8_t value);
 
 #endif

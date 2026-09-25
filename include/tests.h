@@ -71,5 +71,14 @@ void test_comparator_equal(void);
 void test_comparator_less(void);
 void test_comparator_greater(void);
 
+void test_logic_greater(void);
+
+void test_logic_less(void);
+void test_logic_not8(void);
+
+void test_subtractor8_zero(void);
+void test_subtractor8_simple(void);
+void test_subtractor8_borrow(void);
+void test_subtractor8_equal(void);
 
 #endif

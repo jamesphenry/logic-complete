@@ -160,3 +160,37 @@ void test_adder8_carry_in_and_carry_out(void)
     TEST_ASSERT_EQUAL_UINT8(0x00, result.sum);
     TEST_ASSERT_EQUAL_UINT8(1, result.carry);
 }
+
+void test_subtractor8_zero(void)
+{
+    Subtractor8 result = subtractor8(0x00, 0x00);
+
+    TEST_ASSERT_EQUAL_UINT8(0x00, result.difference);
+    TEST_ASSERT_EQUAL_UINT8(0, result.borrow);
+}
+
+void test_subtractor8_simple(void)
+{
+    Subtractor8 result = subtractor8(0x05, 0x03);
+
+    TEST_ASSERT_EQUAL_UINT8(0x02, result.difference);
+    TEST_ASSERT_EQUAL_UINT8(0, result.borrow);
+}
+
+void test_subtractor8_borrow(void)
+{
+    Subtractor8 result = subtractor8(0x03, 0x05);
+
+    TEST_ASSERT_EQUAL_UINT8(0xFE, result.difference);
+    TEST_ASSERT_EQUAL_UINT8(1, result.borrow);
+}
+
+void test_subtractor8_equal(void)
+{
+    Subtractor8 result = subtractor8(0xAA, 0xAA);
+
+    TEST_ASSERT_EQUAL_UINT8(0x00, result.difference);
+    TEST_ASSERT_EQUAL_UINT8(0, result.borrow);
+}
+
+

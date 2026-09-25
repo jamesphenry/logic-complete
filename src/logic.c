@@ -1,4 +1,5 @@
 #include "logic.h"
+#include "bits.h"
 
 uint8_t logic_not(uint8_t a)
 {
@@ -39,3 +40,29 @@ uint8_t logic_equal(uint8_t a, uint8_t b)
 {
     return logic_not(logic_xor(a, b));
 }
+
+uint8_t logic_greater(uint8_t a, uint8_t b)
+{
+    return logic_and(a, logic_not(b));
+}
+
+uint8_t logic_less(uint8_t a, uint8_t b)
+{
+    return logic_and(logic_not(a), b);
+}
+
+uint8_t logic_not8(uint8_t value)
+{
+    uint8_t result = 0;
+
+    for (uint8_t bit = 0; bit < 8; bit++)
+    {
+        uint8_t state = get_bit(value, bit);
+        uint8_t inverted = logic_not(state);
+
+        set_bit(&result, bit, inverted);
+    }
+
+    return result;
+}
+

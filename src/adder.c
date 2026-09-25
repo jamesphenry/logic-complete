@@ -50,3 +50,16 @@ Adder8 adder8(uint8_t a, uint8_t b, uint8_t carry_in)
 
     return result;
 }
+
+Subtractor8 subtractor8(uint8_t a, uint8_t b)
+{
+    Subtractor8 result;
+
+    uint8_t inverted_b = logic_not8(b);
+    Adder8 sum = adder8(a, inverted_b, 1);
+
+    result.difference = sum.sum;
+    result.borrow = logic_not(sum.carry);
+
+    return result;
+}
