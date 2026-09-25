@@ -5,7 +5,7 @@
 <!-- TEST_STATUS_START -->
 | 🧪 Tests | ❌ Failures | ⚪ Ignored | ⚠️ Warnings | 🧠 Memory Errors |
 |---:|---:|---:|---:|---:|
-| **143** | **0** | **0** | **0** | **0** |
+| **145** | **0** | **0** | **2** | **0** |
 <!-- TEST_STATUS_END -->
 
 <!-- MEMORY_STATUS_START -->
