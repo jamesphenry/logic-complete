@@ -1,11 +1,11 @@
 # Logic Complete
-
+##### Logic Complete provides the hardware. The machine designer provides the behavior.
 > A small CPU simulator written in C11, built from the bottom up as a hardware-design and C-learning project.
 
 <!-- TEST_STATUS_START -->
 | 🧪 Tests | ❌ Failures | ⚪ Ignored | ⚠️ Warnings | 🧠 Memory Errors |
 |---:|---:|---:|---:|---:|
-| **136** | **0** | **0** | **0** | **0** |
+| **137** | **0** | **0** | **0** | **0** |
 <!-- TEST_STATUS_END -->
 
 <!-- MEMORY_STATUS_START -->

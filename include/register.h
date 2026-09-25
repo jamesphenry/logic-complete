@@ -9,7 +9,7 @@ typedef struct
 } Register;
 
 void register_init(Register *reg);
-void register_write(Register *reg, uint8_t value);
+void register_write(Register *reg, uint8_t value, uint8_t enable);
 uint8_t register_read(const Register *reg);
 
 #endif

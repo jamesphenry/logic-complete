@@ -36,14 +36,14 @@ void cpu_step(
 
     register_write(
         &cpu->instruction,
-        instruction
+        instruction, 1
     );
 
     uint8_t next_address = address + 1;
 
     register_write(
         &cpu->pc,
-        next_address
+        next_address, 1
     );
 }
 

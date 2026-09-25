@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 136 | 0 | 0 | — |
+| 137 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -244,8 +244,9 @@
 | `test_register_can_store_value` | 🟢 PASS |
 | `test_register_initializes_to_zero` | 🟢 PASS |
 | `test_register_overwrites_previous_value` | 🟢 PASS |
+| `test_register_write_disabled` | 🟢 PASS |
 
-**4 tests discovered**
+**5 tests discovered**
 
 ## Register File
 

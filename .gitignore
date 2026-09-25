@@ -60,3 +60,8 @@ cmake-build-*/
 *.log
 *.tmp
 memory_dump.bin
+
+# ==========================================
+# unimportant files that dont need tracking
+# ==========================================
+notes.md 

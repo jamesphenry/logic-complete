@@ -123,6 +123,7 @@ void test_register_can_store_maximum_value(void);
 void test_register_can_store_value(void);
 void test_register_initializes_to_zero(void);
 void test_register_overwrites_previous_value(void);
+void test_register_write_disabled(void);
 void test_register_file_init(void);
 void test_register_file_write_disabled(void);
 void test_register_file_write_register0(void);
@@ -272,6 +273,7 @@ int main(void)
     RUN_TEST(test_register_can_store_value);
     RUN_TEST(test_register_initializes_to_zero);
     RUN_TEST(test_register_overwrites_previous_value);
+    RUN_TEST(test_register_write_disabled);
     RUN_TEST(test_register_file_init);
     RUN_TEST(test_register_file_write_disabled);
     RUN_TEST(test_register_file_write_register0);
