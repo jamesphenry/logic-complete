@@ -161,4 +161,5 @@ run: $(TARGET)
 
 clean:
 	rm -rf $(BUILD_DIR)
+	rm -f $(TEST_DIR)/generated_test_main.c
 	@echo "Cleaned build output."
