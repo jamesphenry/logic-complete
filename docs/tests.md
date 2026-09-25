@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 129 | 0 | 0 | — |
+| 133 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -159,6 +159,17 @@
 | `test_logic_xor8` | 🟢 PASS |
 
 **18 tests discovered**
+
+## Memory
+
+| Test | Result |
+|---|---|
+| `test_memory_cannot_write_rom` | 🟢 PASS |
+| `test_memory_read_ram` | 🟢 PASS |
+| `test_memory_read_rom` | 🟢 PASS |
+| `test_memory_write_ram` | 🟢 PASS |
+
+**4 tests discovered**
 
 ## Mux
 
