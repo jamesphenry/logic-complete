@@ -137,3 +137,13 @@ void test_logic_xor8(void)
     TEST_ASSERT_EQUAL_UINT8(0xFF, logic_xor8(0x55, 0xAA));
     TEST_ASSERT_EQUAL_UINT8(0xA5, logic_xor8(0xF0, 0x55));
 }
+
+void test_logic_nand8(void)
+{
+    TEST_ASSERT_EQUAL_UINT8(0xFF, logic_nand8(0x00, 0x00));
+    TEST_ASSERT_EQUAL_UINT8(0xFF, logic_nand8(0xFF, 0x00));
+    TEST_ASSERT_EQUAL_UINT8(0x00, logic_nand8(0xFF, 0xFF));
+    TEST_ASSERT_EQUAL_UINT8(0xFF, logic_nand8(0x55, 0xAA));
+    TEST_ASSERT_EQUAL_UINT8(0xAF, logic_nand8(0xF0, 0x55));
+}
+

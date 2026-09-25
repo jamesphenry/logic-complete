@@ -114,3 +114,8 @@ uint8_t logic_xor8(uint8_t a, uint8_t b)
     return result;
 }
 
+uint8_t logic_nand8(uint8_t a, uint8_t b)
+{
+    return logic_not8(logic_and8(a, b));
+}
+
