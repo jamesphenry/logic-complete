@@ -94,4 +94,17 @@ void test_shift_right8_carry(void);
 void test_alu_add(void);
 void test_alu_add_overflow(void);
 void test_alu_sub_borrow(void);
+void test_alu_sub(void);
+void test_alu_sub_borrow(void);
+void test_alu_and(void);
+void test_alu_and_partial(void);
+void test_alu_or(void);
+void test_alu_or_partial(void);
+void test_alu_xor(void);
+void test_alu_xor_partial(void);
+void test_alu_shl(void);
+void test_alu_shl_overflow(void);
+void test_alu_shr(void);
+void test_alu_shr_overflow(void);
+
 #endif

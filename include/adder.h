@@ -28,11 +28,8 @@ typedef struct
 } Subtractor8;
 
 Subtractor8 subtractor8(uint8_t a, uint8_t b);
-
 HalfAdder half_adder(uint8_t a, uint8_t b);
-
 FullAdder full_adder(uint8_t a, uint8_t b, uint8_t carry_in);
-
 Adder8 adder8(uint8_t a, uint8_t b, uint8_t carry_in);
 
 #endif

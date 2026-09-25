@@ -101,6 +101,23 @@ int main(void)
     RUN_TEST(test_alu_add);
     RUN_TEST(test_alu_add_overflow);
     RUN_TEST(test_alu_sub_borrow);
-    
+
+    RUN_TEST(test_alu_sub_borrow);
+    RUN_TEST(test_alu_sub);
+    RUN_TEST(test_alu_and);
+    RUN_TEST(test_alu_and_partial);
+
+    RUN_TEST(test_alu_or);
+    RUN_TEST(test_alu_or_partial);
+
+    RUN_TEST(test_alu_xor);
+    RUN_TEST(test_alu_xor_partial);
+
+    RUN_TEST(test_alu_shl);
+    RUN_TEST(test_alu_shl_overflow);
+
+    RUN_TEST(test_alu_shr);
+    RUN_TEST(test_alu_shr_overflow);
+
     return UNITY_END();
 }
