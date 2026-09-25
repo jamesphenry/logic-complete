@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 133 | 0 | 0 | — |
+| 136 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -107,6 +107,16 @@
 | `test_comparator_equal` | 🟢 PASS |
 | `test_comparator_greater` | 🟢 PASS |
 | `test_comparator_less` | 🟢 PASS |
+
+**3 tests discovered**
+
+## Cpu
+
+| Test | Result |
+|---|---|
+| `test_cpu_fetches_instruction` | 🟢 PASS |
+| `test_cpu_fetches_sequential_instructions` | 🟢 PASS |
+| `test_cpu_increments_program_counter` | 🟢 PASS |
 
 **3 tests discovered**
 
