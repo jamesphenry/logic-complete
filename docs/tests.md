@@ -7,7 +7,7 @@
 <!-- TEST_SUMMARY_START -->
 | Tests | Failures | Ignored | Warnings |
 |---:|---:|---:|---:|
-| 123 | 0 | 0 | — |
+| 126 | 0 | 0 | — |
 <!-- TEST_SUMMARY_END -->
 
 ---
@@ -228,6 +228,16 @@
 | `test_register_file_write_register3` | 🟢 PASS |
 
 **6 tests discovered**
+
+## Rom
+
+| Test | Result |
+|---|---|
+| `test_rom_copies_data` | 🟢 PASS |
+| `test_rom_destroy` | 🟢 PASS |
+| `test_rom_init` | 🟢 PASS |
+
+**3 tests discovered**
 
 ## Shift
 

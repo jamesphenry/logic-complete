@@ -37,6 +37,7 @@ GENERATED_TEST_OBJ  := $(OBJ_DIR)/tests/generated_test_main.o
 TEST_STATUS     := $(BUILD_DIR)/test_status
 COMPILER_OUTPUT := $(BUILD_DIR)/compiler_output
 COMPILER_LOG    := $(BUILD_DIR)/compiler_log_ready
+VALGRIND_OUTPUT := $(BUILD_DIR)/valgrind_output
 
 # Dependencies (.d)
 DEPS := \
@@ -114,7 +115,7 @@ $(GENERATED_TEST_OBJ): $(GENERATED_TEST_MAIN)
 -include $(DEPS)
 
 # ------------------------------------------------------------
-# Run unit tests
+# Run unit tests and Valgrind
 # ------------------------------------------------------------
 
 test: $(TEST_TARGET)
@@ -123,10 +124,20 @@ test: $(TEST_TARGET)
 	@echo
 	@echo "Running unit tests..."
 	@./$(TEST_TARGET) | tee $(BUILD_DIR)/test_output
+	@echo
+	@echo "Running Valgrind..."
+	@valgrind \
+		--leak-check=full \
+		--error-exitcode=1 \
+		./$(TEST_TARGET) \
+		> $(VALGRIND_OUTPUT) 2>&1
+	@cat $(VALGRIND_OUTPUT)
+	@echo
 	@python3 scripts/generate_test_status.py \
 		$(BUILD_DIR)/test_output \
 		$(TEST_STATUS) \
-		$(COMPILER_OUTPUT)
+		$(COMPILER_OUTPUT) \
+		$(VALGRIND_OUTPUT)
 
 # ------------------------------------------------------------
 # Run main simulator

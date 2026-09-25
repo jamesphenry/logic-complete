@@ -5,7 +5,7 @@
 <!-- TEST_STATUS_START -->
 | 🧪 Tests | ❌ Failures | ⚪ Ignored | ⚠️ Warnings |
 |---:|---:|---:|---:|
-| **123** | **0** | **0** | **0** |
+| **126** | **0** | **0** | **0** |
 <!-- TEST_STATUS_END -->
 
 ## About
