@@ -4,6 +4,7 @@
 
 void test_alu_add(void)
 {
+    
     ALU8 result = alu8(5, 3, ALU_ADD);
 
     TEST_ASSERT_EQUAL_UINT8(8, result.result);

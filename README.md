@@ -3,7 +3,9 @@
 > A small CPU simulator written in C11, built from the bottom up as a hardware-design and C-learning project.
 
 <!-- TEST_STATUS_START -->
-**Test Status:** 🟢 123 tests passing
+| 🧪 Tests | ❌ Failures | ⚪ Ignored | ⚠️ Warnings |
+|---:|---:|---:|---:|
+| **123** | **0** | **0** | **0** |
 <!-- TEST_STATUS_END -->
 
 ## About
