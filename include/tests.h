@@ -85,5 +85,7 @@ void test_logic_and8(void);
 
 void test_logic_or8(void);
 
+void test_logic_xor8(void);
+
 
 #endif

@@ -91,6 +91,8 @@ int main(void)
     RUN_TEST(test_logic_and8);
 
     RUN_TEST(test_logic_or8);
+
+    RUN_TEST(test_logic_xor8);
     
     return UNITY_END();
 }

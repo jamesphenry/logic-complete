@@ -97,3 +97,20 @@ uint8_t logic_or8(uint8_t a, uint8_t b)
 
     return result;
 }
+
+uint8_t logic_xor8(uint8_t a, uint8_t b)
+{
+    uint8_t result = 0;
+
+    for (uint8_t bit = 0; bit < 8; bit++)
+    {
+        uint8_t a_bit = get_bit(a, bit);
+        uint8_t b_bit = get_bit(b, bit);
+        uint8_t result_bit = logic_xor(a_bit, b_bit);
+
+        set_bit(&result, bit, result_bit);
+    }
+
+    return result;
+}
+
