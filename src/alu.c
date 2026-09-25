@@ -4,6 +4,7 @@
 #include "shifter.h"
 #include "zero.h"
 #include "negative.h"
+#include "overflow.h"
 
 ALU8 alu8(uint8_t a, uint8_t b, uint8_t operation)
 {
@@ -11,11 +12,15 @@ ALU8 alu8(uint8_t a, uint8_t b, uint8_t operation)
 
     result.result = 0;
     result.negative = 0;
+    result.overflow = 0;
+
     if (operation == ALU_ADD)
     {
         Adder8 add = adder8(a, b, 0);
         result.result = add.sum;
         result.carry = add.carry;
+        result.overflow = overflow_add8(a, b, result.result);
+
     }
     else if (operation == ALU_SUB)
     {

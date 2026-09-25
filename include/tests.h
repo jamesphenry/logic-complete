@@ -134,5 +134,15 @@ void test_overflow_add8_negative(void);
 void test_overflow_add8_no_overflow_positive(void);
 void test_overflow_add8_no_overflow_negative(void);
 
+void test_alu_add_overflow(void);
+void test_alu_add_no_overflow(void);
+void test_overflow_add8_no_overflow_negative(void);
+
+void test_flags_init(void);
+void test_flags_write_zero(void);
+void test_flags_write_carry(void);
+void test_flags_write_borrow(void);
+void test_flags_write_negative(void);
+void test_flags_write_overflow(void);
 
 #endif

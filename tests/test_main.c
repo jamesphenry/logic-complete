@@ -144,5 +144,15 @@ int main(void)
     RUN_TEST(test_overflow_add8_no_overflow_positive);
     RUN_TEST(test_overflow_add8_no_overflow_negative);
 
+    RUN_TEST(test_alu_add_overflow);
+    RUN_TEST(test_alu_add_no_overflow);
+
+    RUN_TEST(test_flags_init);
+    RUN_TEST(test_flags_write_zero);
+    RUN_TEST(test_flags_write_carry);
+    RUN_TEST(test_flags_write_borrow);
+    RUN_TEST(test_flags_write_negative);
+    RUN_TEST(test_flags_write_overflow);
+
     return UNITY_END();
 }
